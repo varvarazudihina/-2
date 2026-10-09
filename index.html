@@ -52,9 +52,7 @@
   <script>
     // Скрываем экран загрузки, когда сцена полностью инициализирована
     const scene = document.querySelector('a-scene');
-    scene.addEventListener('loaded', () => {
-      document.getElementById('loading').style.display = 'none';
-    });
+    scene.addEventListener('arReady', () => { loading.style.display = 'none'; });
     
     // Дополнительная обработка ошибок загрузки
     scene.addEventListener('mindar-error', (event) => {
